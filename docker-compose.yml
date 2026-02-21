@@ -1,0 +1,27 @@
+# =============================================================================
+# docker-compose.yml - Docker Compose Configuration
+# =============================================================================
+# Simplifies running the file explorer container with proper X11 settings.
+# Dosya gezgini konteynerini uygun X11 ayarlarıyla çalıştırmayı kolaylaştırır.
+#
+# Usage / Kullanım:
+#   docker-compose up --build
+# =============================================================================
+
+services:
+  file-explorer-app:
+    build: .
+    container_name: file-explorer-app
+    environment:
+      # Display setting for GUI / GUI için ekran ayarı
+      # Linux: use $DISPLAY (usually :0)
+      # macOS: use host.docker.internal:0 (requires XQuartz)
+      - DISPLAY=${DISPLAY:-host.docker.internal:0}
+    volumes:
+      # X11 socket for display forwarding (Linux only)
+      # Ekran yönlendirmesi için X11 soketi (sadece Linux)
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      # Mount home directory as read-only for browsing
+      # Ev dizinini gezinme için salt okunur olarak bağla
+      - ${HOME}:/host-home:ro
+    network_mode: host

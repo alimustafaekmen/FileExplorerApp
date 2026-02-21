@@ -1,0 +1,41 @@
+# =============================================================================
+# .gitignore - Files to be ignored by Git
+# Git tarafından yoksayılacak dosyalar
+# =============================================================================
+
+# Python cache files / Python önbellek dosyaları
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# Virtual environment / Sanal ortam
+venv/
+.env/
+env/
+
+# IDE / Editor files / IDE / Editör dosyaları
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS system files / macOS sistem dosyaları
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows system files / Windows sistem dosyaları
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Distribution / Dağıtım
+dist/
+build/
+*.egg-info/
+
+# Unnecessary project files / Gereksiz proje dosyaları
+*.rtf
+icons/

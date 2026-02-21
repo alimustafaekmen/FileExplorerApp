@@ -1,0 +1,15 @@
+# =============================================================================
+# Requirements / Gereksinimler
+# =============================================================================
+# This project uses only Python standard library modules.
+# No external packages need to be installed.
+#
+# Bu proje sadece Python standart kütüphane modüllerini kullanır.
+# Harici bir paket kurulumu gerekmez.
+#
+# Standard Library Modules Used / Kullanılan Standart Kütüphane Modülleri:
+# - tkinter  : GUI (Graphical User Interface) / Grafiksel Kullanıcı Arayüzü
+# - os       : File and directory operations / Dosya ve dizin işlemleri
+# - sys      : System parameters / Sistem parametreleri
+# - time     : Time-related operations / Zaman işlemleri
+# =============================================================================
